@@ -3,111 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillGrid - Hire Top Freelancers</title>
+    <title>SkillGrid - Find Top Freelance Services</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-layer-group"></i>
-                <span>SkillGrid</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Browse Jobs</a></li>
-                <li><a href="#services">Find Talent</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <button class="btn-login">Login</button>
-                <button class="btn-signup">Sign Up</button>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-bolt"></i> SkillGrid</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="btn-login">Login</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Find The Perfect <span>Freelance Services</span> For Your Business</h1>
-            <p>Millions of people use SkillGrid to turn their ideas into reality. Hire expert freelancers for any job, online.</p>
+            <h1>Find the Best <span>Freelance</span> Services</h1>
+            <p>Connect with talented freelancers and get your projects done efficiently</p>
             <div class="search-bar">
-                <input type="text" placeholder="Search for any service...">
-                <button><i class="fas fa-search"></i> Search</button>
+                <input type="text" id="searchInput" placeholder="Search for any service...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
             </div>
             <div class="popular-tags">
                 <span>Popular:</span>
-                <a href="#">Website Design</a>
-                <a href="#">Logo Design</a>
-                <a href="#">Video Editing</a>
+                <a href="#" data-category="design">Design</a>
+                <a href="#" data-category="development">Development</a>
+                <a href="#" data-category="marketing">Marketing</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600" alt="Freelancers">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500" alt="Freelancers">
         </div>
     </section>
 
+    <!-- Services Section - Day 2 Task -->
     <section class="services" id="services">
-        <h2>Popular Professional Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Graphics">
-                <h3>Graphics & Design</h3>
-                <p>Logo, Brand Style Guides, Web Design</p>
+        <h2>Browse Services</h2>
+        
+        <!-- Category Filter UI -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="development">Development</button>
+            <button class="filter-btn" data-filter="marketing">Marketing</button>
+            <button class="filter-btn" data-filter="writing">Writing</button>
+        </div>
+
+        <!-- Services Listing -->
+        <div class="services-grid" id="servicesGrid">
+            <div class="service-card" data-category="design">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Graphic Design">
+                <h3>Graphic Design</h3>
+                <p>Professional logos, branding & marketing materials</p>
+                <span class="price">Starting at $50</span>
             </div>
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Digital">
+            <div class="service-card" data-category="development">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Responsive websites & web applications</p>
+                <span class="price">Starting at $200</span>
+            </div>
+            <div class="service-card" data-category="marketing">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055672.png" alt="Digital Marketing">
                 <h3>Digital Marketing</h3>
-                <p>SEO, Social Media, Content Marketing</p>
+                <p>SEO, Social Media & Growth strategies</p>
+                <span class="price">Starting at $100</span>
             </div>
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2282/2282188.png" alt="Writing">
-                <h3>Writing & Translation</h3>
-                <p>Articles, Blog Posts, Proofreading</p>
+            <div class="service-card" data-category="writing">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055677.png" alt="Content Writing">
+                <h3>Content Writing</h3>
+                <p>Blogs, Articles & Copywriting services</p>
+                <span class="price">Starting at $30</span>
             </div>
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Video">
-                <h3>Video & Animation</h3>
-                <p>Video Editing, Animation, Intros</p>
+            <div class="service-card" data-category="design">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055659.png" alt="UI/UX Design">
+                <h3>UI/UX Design</h3>
+                <p>User interface & experience design</p>
+                <span class="price">Starting at $150</span>
+            </div>
+            <div class="service-card" data-category="development">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055684.png" alt="App Development">
+                <h3>App Development</h3>
+                <p>iOS & Android mobile applications</p>
+                <span class="price">Starting at $500</span>
             </div>
         </div>
     </section>
 
-    <footer id="about">
+    <!-- Footer -->
+    <footer>
         <div class="footer-content">
-            <div class="footer-col">
-                <h3><i class="fas fa-layer-group"></i> SkillGrid</h3>
-                <p>World's best freelance marketplace for businesses and talent.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <a href="#">About Us</a>
-                <a href="#">Careers</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <a href="#">Blog</a>
-                <a href="#">Help Center</a>
-                <a href="#">Guides</a>
-            </div>
-            <div class="footer-col">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 SkillGrid. All rights reserved.</p>
+            <div class="footer-col"><h3><i class="fas fa-bolt"></i> SkillGrid</h3><p>Connecting talent with opportunity</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><a href="#">About Us</a><a href="#">Services</a><a href="#">Contact</a></div>
+            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
         </div>
+        <div class="footer-bottom"><p>&copy; 2026 SkillGrid. All rights reserved.</p></div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
