@@ -159,7 +159,6 @@ body {
     color: white;
 }
 
-/* Responsive Grid Layout */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -295,4 +294,3 @@ footer {
         font-size: 0.9rem;
     }
 }
-
