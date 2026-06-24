@@ -3,194 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillGrid - Services Page</title>
+    <title>SkillNest - Freelance Services</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"><i class="fas fa-bolt"></i> SkillGrid</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <button class="btn-login">Login</button>
-            <button class="btn-signup">Sign Up</button>
+        <div class="nav-top">
+            <div class="logo">SkillNest</div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
         </div>
-        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">Browse Jobs</a></li>
+            <li><a href="#">Find Talent</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
     </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Find the Best <span>Freelance</span> Services</h1>
-            <p>Connect with talented freelancers and get your projects done efficiently</p>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search for any service...">
-                <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
-            </div>
+    <section class="hero">
+        <h1>Find The Perfect <span>Freelance Services</span> For Your Business</h1>
+        <p>Millions of people use SkillNest to turn their ideas into reality. Hire expert freelancers for any job, online.</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for any service...">
+            <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <div class="popular-tags">
+            <span>Popular:</span>
+            <button class="tag">Website Design</button>
+            <button class="tag">Logo Design</button>
+            <button class="tag">Video Editing</button>
         </div>
     </section>
 
     <section class="services" id="services">
         <h2>Browse Services</h2>
+        <p class="subtitle">Find the perfect freelance services for your business</p>
         
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="webdev">Web Development</button>
-            <button class="filter-btn" data-filter="design">Graphic Design</button>
-            <button class="filter-btn" data-filter="writing">Writing</button>
-            <button class="filter-btn" data-filter="marketing">Marketing</button>
-            <button class="filter-btn" data-filter="video">Video Editing</button>
-            <button class="filter-btn" data-filter="programming">Programming</button>
+        <div class="search-bar">
+            <input type="text" id="searchInput2" placeholder="Search for any service...">
+            <button id="searchBtn2"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filter by Category</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="webdev">Web Development</button>
+                <button class="filter-btn" data-filter="design">Graphic Design</button>
+                <button class="filter-btn" data-filter="writing">Writing</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+            </div>
         </div>
 
         <div class="services-grid" id="servicesGrid">
-            <!-- Card 1 -->
-            <div class="service-card" data-category="webdev">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Service Image">
-                <h3>Responsive Website Design</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Ahmed Khan</p>
-                <p class="desc">Modern responsive websites with HTML, CSS & JavaScript</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $200</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+            <a href="service-details.html?id=1" class="service-link">
+                <div class="service-card" data-category="webdev">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Service">
+                    <h3>Professional Website Design</h3>
+                    <p class="desc">I will create a modern responsive website for your business</p>
+                    <p class="price">Starting at $200</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.9</p>
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="service-card" data-category="design">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt="Service Image">
-                <h3>Logo & Brand Identity</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Sarah Ali</p>
-                <p class="desc">Professional logos and complete brand identity packages</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $50</span>
-                    <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+            </a>
+            <a href="service-details.html?id=2" class="service-link">
+                <div class="service-card" data-category="design">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315adbd?w=400" alt="Service">
+                    <h3>Professional Logo Design</h3>
+                    <p class="desc">I will create a modern minimalist logo</p>
+                    <p class="price">Starting at $80</p>
+                    <p class="rating"><i class="fas fa-star"></i> 5.0</p>
                 </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="service-card" data-category="writing">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055677.png" alt="Service Image">
-                <h3>SEO Blog Writing</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Fatima Noor</p>
-                <p class="desc">Engaging SEO optimized blog posts and articles</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $30</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+            </a>
+            <a href="service-details.html?id=3" class="service-link">
+                <div class="service-card" data-category="writing">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400" alt="Service">
+                    <h3>SEO Blog Writing</h3>
+                    <p class="desc">Engaging SEO optimized blog posts and articles</p>
+                    <p class="price">Starting at $30</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.8</p>
                 </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="service-card" data-category="marketing">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055672.png" alt="Service Image">
-                <h3>Social Media Marketing</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Bilal Sheikh</p>
-                <p class="desc">Complete social media management & growth strategy</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $100</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+            </a>
+            <a href="service-details.html?id=4" class="service-link">
+                <div class="service-card" data-category="marketing">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Service">
+                    <h3>Social Media Marketing</h3>
+                    <p class="desc">Complete social media management & growth strategy</p>
+                    <p class="price">Starting at $100</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.7</p>
                 </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="service-card" data-category="video">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" alt="Service Image">
-                <h3>Video Editing & Post Production</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Usman Raza</p>
-                <p class="desc">Professional video editing for YouTube & commercials</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $80</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+            </a>
+            <a href="service-details.html?id=5" class="service-link">
+                <div class="service-card" data-category="video">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400" alt="Service">
+                    <h3>Video Editing Service</h3>
+                    <p class="desc">Professional video editing for YouTube & commercials</p>
+                    <p class="price">Starting at $80</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.9</p>
                 </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="service-card" data-category="programming">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055684.png" alt="Service Image">
-                <h3>Mobile App Development</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Hassan Javed</p>
-                <p class="desc">Native iOS & Android apps with Flutter/React Native</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $500</span>
-                    <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+            </a>
+            <a href="service-details.html?id=6" class="service-link">
+                <div class="service-card" data-category="programming">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400" alt="Service">
+                    <h3>Mobile App Development</h3>
+                    <p class="desc">Native iOS & Android apps with Flutter</p>
+                    <p class="price">Starting at $500</p>
+                    <p class="rating"><i class="fas fa-star"></i> 5.0</p>
                 </div>
-            </div>
-            <!-- Card 7 -->
-            <div class="service-card" data-category="webdev">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055697.png" alt="Service Image">
-                <h3>E-commerce Website</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Zain Malik</p>
-                <p class="desc">Complete Shopify/WooCommerce online stores</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $400</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+            </a>
+            <a href="service-details.html?id=7" class="service-link">
+                <div class="service-card" data-category="webdev">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Service">
+                    <h3>E-commerce Website</h3>
+                    <p class="desc">Complete Shopify/WooCommerce online stores</p>
+                    <p class="price">Starting at $400</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.8</p>
                 </div>
-            </div>
-            <!-- Card 8 -->
-            <div class="service-card" data-category="design">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055659.png" alt="Service Image">
-                <h3>UI/UX Design</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Ayesha Khan</p>
-                <p class="desc">User interface & experience design for web & mobile</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $150</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+            </a>
+            <a href="service-details.html?id=8" class="service-link">
+                <div class="service-card" data-category="design">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400" alt="Service">
+                    <h3>UI/UX Design</h3>
+                    <p class="desc">User interface & experience design for web & mobile</p>
+                    <p class="price">Starting at $150</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.9</p>
                 </div>
-            </div>
-            <!-- Card 9 -->
-            <div class="service-card" data-category="writing">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055675.png" alt="Service Image">
-                <h3>Copywriting Services</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Mariam Shah</p>
-                <p class="desc">Sales copy, email sequences & landing page content</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $40</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+            </a>
+            <a href="service-details.html?id=9" class="service-link">
+                <div class="service-card" data-category="writing">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400" alt="Service">
+                    <h3>Copywriting Services</h3>
+                    <p class="desc">Sales copy, email sequences & landing page content</p>
+                    <p class="price">Starting at $40</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.7</p>
                 </div>
-            </div>
-            <!-- Card 10 -->
-            <div class="service-card" data-category="marketing">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055679.png" alt="Service Image">
-                <h3>SEO Optimization</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Ali Raza</p>
-                <p class="desc">Complete on-page & off-page SEO for Google ranking</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $120</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+            </a>
+            <a href="service-details.html?id=10" class="service-link">
+                <div class="service-card" data-category="marketing">
+                    <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c1bc?w=400" alt="Service">
+                    <h3>SEO Optimization</h3>
+                    <p class="desc">Complete on-page & off-page SEO for Google ranking</p>
+                    <p class="price">Starting at $120</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.8</p>
                 </div>
-            </div>
-            <!-- Card 11 -->
-            <div class="service-card" data-category="video">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055655.png" alt="Service Image">
-                <h3>Motion Graphics</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Saad Ahmed</p>
-                <p class="desc">Animated explainer videos & motion graphics</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $150</span>
-                    <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+            </a>
+            <a href="service-details.html?id=11" class="service-link">
+                <div class="service-card" data-category="video">
+                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400" alt="Service">
+                    <h3>Motion Graphics</h3>
+                    <p class="desc">Animated explainer videos & motion graphics</p>
+                    <p class="price">Starting at $150</p>
+                    <p class="rating"><i class="fas fa-star"></i> 4.9</p>
                 </div>
-            </div>
-            <!-- Card 12 -->
-            <div class="service-card" data-category="programming">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055662.png" alt="Service Image">
-                <h3>Python Automation</h3>
-                <p class="freelancer"><i class="fas fa-user"></i> Kamran Iqbal</p>
-                <p class="desc">Custom Python scripts for automation & data scraping</p>
-                <div class="card-footer">
-                    <span class="price">Starting at $90</span>
-                    <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+            </a>
+            <a href="service-details.html?id=12" class="service-link">
+                <div class="service-card" data-category="programming">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400" alt="Service">
+                    <h3>Python Automation</h3>
+                    <p class="desc">Custom Python scripts for automation & data scraping</p>
+                    <p class="price">Starting at $90</p>
+                    <p class="rating"><i class="fas fa-star"></i> 5.0</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-col"><h3><i class="fas fa-bolt"></i> SkillGrid</h3><p>Connecting talent with opportunity</p></div>
-            <div class="footer-col"><h4>Quick Links</h4><a href="#">About Us</a><a href="#services">Services</a><a href="#">Contact</a></div>
-            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2026 SkillGrid. All rights reserved.</p></div>
+        <p>&copy; 2026 SkillNest. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
