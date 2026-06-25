@@ -10,6 +10,8 @@
     --dark: #1e293b;
     --light: #f8fafc;
     --gray: #64748b;
+    --success: #10b981;
+    --error: #ef4444;
 }
 
 body {
@@ -59,6 +61,10 @@ body {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
 }
 
 .hero {
@@ -248,74 +254,71 @@ body {
     display: none;
 }
 
-.service-details-page {
-    background: white;
-    min-height: 100vh;
-}
-
-.service-header {
+.page-header {
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    padding: 2rem 5%;
     color: white;
+    text-align: center;
+    padding: 3rem 5%;
 }
 
-.service-header img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-}
-
-.service-header h1 {
-    font-size: 1.8rem;
+.page-header h1 {
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.seller-info {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-top: 1rem;
+.about-container, .contact-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
 }
 
-.seller-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+.about-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.seller-info .name {
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
+.about-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
 }
 
-.seller-info .name:hover {
-    text-decoration: underline;
+.about-section p {
+    color: var(--gray);
+    line-height: 1.8;
 }
 
-.seller-info .rating {
-    color: #fbbf24;
-}
-
-.detail-content {
-    padding: 2rem 5%;
-}
-
-.section {
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.section h2 {
-    font-size: 1.3rem;
+.stat-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat-box i {
+    font-size: 2.5rem;
+    color: var(--primary);
     margin-bottom: 1rem;
 }
 
-.section p {
+.stat-box h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p {
     color: var(--gray);
-    line-height: 1.6;
 }
 
 .features {
@@ -323,56 +326,98 @@ body {
 }
 
 .features li {
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     color: var(--gray);
 }
 
 .features li i {
-    color: #10b981;
+    color: var(--success);
     margin-right: 0.5rem;
 }
 
-.review-card {
-    background: #f8fafc;
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-info, .contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-top: 0.3rem;
+}
+
+.info-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.info-item p {
+    color: var(--gray);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.error-msg {
+    color: var(--error);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.3rem;
+    min-height: 1.2rem;
+}
+
+.success-msg {
+    background: #d1fae5;
+    color: var(--success);
     padding: 1rem;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: none;
 }
 
-.review-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-}
-
-.review-header .name {
-    font-weight: 600;
-}
-
-.review-header .stars {
-    color: #f59e0b;
-}
-
-.pricing-box {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin: 2rem 5%;
-}
-
-.pricing-box .price {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.pricing-box .info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--gray);
-    margin-bottom: 0.8rem;
+.success-msg.show {
+    display: block;
 }
 
 .btn-primary {
@@ -385,64 +430,11 @@ body {
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    margin-bottom: 0.5rem;
+    transition: 0.3s;
 }
 
-.btn-secondary {
-    width: 100%;
-    padding: 1rem;
-    background: white;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.seller-profile-page {
-    padding: 2rem 5%;
-    background: white;
-    min-height: 100vh;
-}
-
-.profile-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.profile-header img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-.profile-header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.profile-header .rating {
-    color: #f59e0b;
-    font-weight: 600;
-}
-
-.profile-stats {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.stat h3 {
-    font-size: 1.5rem;
-    color: var(--primary);
-}
-
-.stat p {
-    color: var(--gray);
-    font-size: 0.9rem;
+.btn-primary:hover {
+    background: #4f46e5;
 }
 
 footer {
@@ -453,20 +445,18 @@ footer {
     margin-top: 3rem;
 }
 
-.back-btn {
-    display: inline-block;
-    margin: 1rem 5%;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-}
-
 @media (min-width: 768px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .hero h1 {
         font-size: 2.5rem;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .contact-container {
+        grid-template-columns: 1fr 1.5fr;
     }
 }
 
@@ -486,6 +476,4 @@ footer {
         flex: 1;
     }
 }
-
-
 
