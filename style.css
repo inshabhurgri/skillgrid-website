@@ -250,10 +250,6 @@ body {
     font-weight: 600;
 }
 
-.service-card.hide {
-    display: none;
-}
-
 .page-header {
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
     color: white;
@@ -475,5 +471,28 @@ footer {
         display: block;
         flex: 1;
     }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-links {
+        display: flex !important;
+        margin-top: 0;
+        gap: 2rem;
+    }
+    .nav-links li {
+        padding: 0;
+        border-bottom: none;
+    }
+    .nav-links a {
+        font-size: 1rem;
+    }
 }
+
+
+
 
